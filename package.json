@@ -5,5 +5,12 @@
     "version": "0.1",
     "fullName": "Watchdog: Dezik",
     "id": "jid1-CYwqDJuz1KjsBw",
-    "description": "a basic add-on"
+    "description": "Managing your passwords, so you don't have to",
+    "preferences": [{
+        "name": "copyDuration",
+        "title": "Clipboard duration (seconds)",
+        "description": "For how long, after a new password is created, should the clipboard contain the new password?",
+        "type": "integer",
+        "value": 20
+    }]
 }
