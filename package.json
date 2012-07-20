@@ -1,11 +1,11 @@
 {
-    "name": "watchdog-dezik",
+    "name": "make-my-password",
     "license": "GPL v3.0",
     "author": "Nathan Malkin <nmalkin@mozilla.com>",
-    "version": "0.1",
-    "fullName": "Watchdog: Dezik",
+    "version": "0.1.0",
+    "fullName": "Make My Password",
     "id": "jid1-CYwqDJuz1KjsBw",
-    "description": "Managing your passwords, so you don't have to",
+    "description": "Managing your passwords, so you don't have to.                               \n\nThis is a simple add-on that will, when you ask it, create a password for you by randomly pulling from a string of characters.\n\nHow to Use It\nRight-click on a password field and select \"Create Password\" from the menu.\n\nAdditional Features \nAfter you create a password, it will be automatically copied to your clipboard.  That way, if, for example, you use an external password manager, you can save your new password in it right away. \n\nCan I Save the Password in Firefox?  \nSure! After the password is created and you submit the form, Firefox should ask you if you want it to remember the password. Tell it, \"yes.\"",
     "preferences": [{
         "name": "passwordLength",
         "title": "Password Length",
@@ -22,7 +22,7 @@
     },
     {
         "name": "copyDuration",
-        "title": "Clipboard duration (seconds)",
+        "title": "Clipboard Duration (seconds)",
         "description": "For how long, after a new password is created, should the clipboard contain the new password?",
         "type": "integer",
         "value": 20
