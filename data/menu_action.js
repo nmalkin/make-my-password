@@ -1,6 +1,3 @@
-var CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()'
-var NEW_PASSWORD_LENGTH = 32;
-
 /** Returns random integer on [0, upperBound) */
 function randInt(upperBound) {
     return Math.floor(Math.random() * upperBound);
@@ -12,18 +9,20 @@ function selectRandom(array) {
 }
 
 /** Returns a random password of given length using characters in CHARS */
-function generateRandomPassword(length) {
+function generateRandomPassword(length, chars) {
     var password = '';
     for(var i = 0; i < length; i++) {
-        password += selectRandom(CHARS);
+        password += selectRandom(chars);
     }
 
     return password;
 }
 
-self.on('click', function(node) {
+self.on('click', function(node, data) {
+    var preferences = JSON.parse(data);
+
     // Generate password
-    var password = generateRandomPassword(NEW_PASSWORD_LENGTH);
+    var password = generateRandomPassword(preferences.passwordLength, preferences.passwordChars);
 
     // Fill the field in with this value.
     node.value = password;
